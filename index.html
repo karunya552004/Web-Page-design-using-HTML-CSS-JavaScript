@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <div class="section">
+        <p class="color-text">Background Color : <span style="color:white">white</span></p><br>
+            <button class="button" onclick="color()">Click Here</button>
+    </div>
+    <script>
+    
+    function color() {
+  var colors = ["rosybrown", "lightblue", "brown", "blueviolet", "purple","red","green"];
+  var randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = randomColor;
+  document.querySelector(".color-text span").style.color = randomColor;
+  document.querySelector(".color-text span").innerText = randomColor.charAt(0).toUpperCase() + randomColor.slice(1);
+}
+    </script>
+</body>
+</html>
